@@ -127,7 +127,7 @@ app.get('/big-devs(.html)?', [cohort1, cohort2, cohort3, cohort4])
 
 
 
-app.get('/*', (req, res) => {
+app.all('/*', (req, res) => {
     res.status(404)
     if (req.accepts('html')){
     res.sendFile(path.join(__dirname, 'views', '404.html'))
@@ -137,7 +137,6 @@ app.get('/*', (req, res) => {
         res.type('txt').send('404 Not found')
     }
 })
-
 
 
 
