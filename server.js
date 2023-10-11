@@ -119,14 +119,6 @@ app.get('/big-devs(.html)?', [cohort1, cohort2, cohort3, cohort4])
 
 
 
-
-
-
-
-
-
-
-
 app.all('/*', (req, res) => {
     res.status(404)
     if (req.accepts('html')) {
